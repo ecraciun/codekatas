@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CK1
 {
+    // http://codekata.com/kata/kata02-karate-chop/
     public class Chopper
     {
         public int CurrentSearchItem { get; set; }

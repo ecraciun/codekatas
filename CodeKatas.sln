@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CK1.Tests", "CK1.Tests\CK1.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CK1.Specs", "CK1.Specs\CK1.Specs.csproj", "{D3C18C5B-8655-4CBC-B654-FA192ABD08D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameCore", "GameCore\GameCore.csproj", "{853CE3FE-BE9A-493C-B49C-3696F9A33351}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameCore.Specs", "GameCore.Specs\GameCore.Specs.csproj", "{AC490235-375C-4896-94F9-5A81C6DD8E7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{D3C18C5B-8655-4CBC-B654-FA192ABD08D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3C18C5B-8655-4CBC-B654-FA192ABD08D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3C18C5B-8655-4CBC-B654-FA192ABD08D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{853CE3FE-BE9A-493C-B49C-3696F9A33351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{853CE3FE-BE9A-493C-B49C-3696F9A33351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{853CE3FE-BE9A-493C-B49C-3696F9A33351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{853CE3FE-BE9A-493C-B49C-3696F9A33351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC490235-375C-4896-94F9-5A81C6DD8E7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC490235-375C-4896-94F9-5A81C6DD8E7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC490235-375C-4896-94F9-5A81C6DD8E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC490235-375C-4896-94F9-5A81C6DD8E7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

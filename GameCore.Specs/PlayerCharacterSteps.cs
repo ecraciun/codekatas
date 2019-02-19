@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 using TechTalk.SpecFlow;
@@ -53,7 +54,9 @@ namespace GameCore.Specs
             //var race = table.Rows.First(r => r["attribute"] == "Race")["value"];
             //var resistance = table.Rows.First(r => r["attribute"] == "Resistance")["value"];
 
-            var attributes = table.CreateInstance<PlayerAttributes>();
+            //var attributes = table.CreateInstance<PlayerAttributes>();
+
+            dynamic attributes = table.CreateDynamicInstance();
 
             _player.Race = attributes.Race;
             _player.DamageResistance = attributes.Resistance;
@@ -71,5 +74,55 @@ namespace GameCore.Specs
             _player.CastHealingSpell();
         }
 
+
+        [Given(@"I have the following magical items")]
+        public void GivenIHaveTheFollowingMagicalItems(Table table)
+        {
+            //foreach (var row in table.Rows)
+            //{
+            //    var name = row["item"];
+            //    var value = row["value"];
+            //    var power = row["power"];
+
+            //    _player.MagicalItems.Add(new MagicalItem
+            //    {
+            //        Name = name,
+            //        Value =  int.Parse(value),
+            //        Power = int.Parse(power)
+            //    });
+            //}
+
+            //IEnumerable<MagicalItem> items = table.CreateSet<MagicalItem>();
+            //_player.MagicalItems.AddRange(items);
+
+            IEnumerable<dynamic> items = table.CreateDynamicSet();
+            foreach (var item in items)
+            {
+                _player.MagicalItems.Add(new MagicalItem
+                {
+                    Name = item.name,
+                    Value = item.value,
+                    Power = item.power
+                });
+            }
+        }
+
+        [Then(@"My total magical power should be (.*)")]
+        public void ThenMyTotalMagicalPowerShouldBe(int expectedPower)
+        {
+            Assert.Equal(expectedPower, _player.MagicalPower);
+        }
+
+        [Given(@"I last slept (.* days ago)")]
+        public void GivenILastSleptDaysAgo(DateTime lastSlept)
+        {
+            _player.LastSleepTime = lastSlept;
+        }
+
+        [When(@"I read a restore health scroll")]
+        public void WhenIReadARestoreHealthScroll()
+        {
+            _player.ReadHealthScroll();
+        }
     }
 }

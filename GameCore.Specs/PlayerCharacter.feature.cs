@@ -199,6 +199,65 @@ this.FeatureBackground();
             this.ScenarioCleanup();
         }
         
+        [Xunit.FactAttribute(DisplayName="Total magical power")]
+        [Xunit.TraitAttribute("FeatureTitle", "PlayerCharacter")]
+        [Xunit.TraitAttribute("Description", "Total magical power")]
+        public virtual void TotalMagicalPower()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Total magical power", null, ((string[])(null)));
+#line 44
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "name",
+                        "value",
+                        "power"});
+            table2.AddRow(new string[] {
+                        "Ring",
+                        "200",
+                        "100"});
+            table2.AddRow(new string[] {
+                        "Amulet",
+                        "400",
+                        "200"});
+            table2.AddRow(new string[] {
+                        "Gloves",
+                        "100",
+                        "400"});
+#line 45
+ testRunner.Given("I have the following magical items", ((string)(null)), table2, "Given ");
+#line 50
+ testRunner.Then("My total magical power should be 700", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Reading a restore health scroll when over tired has no effect")]
+        [Xunit.TraitAttribute("FeatureTitle", "PlayerCharacter")]
+        [Xunit.TraitAttribute("Description", "Reading a restore health scroll when over tired has no effect")]
+        public virtual void ReadingARestoreHealthScrollWhenOverTiredHasNoEffect()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Reading a restore health scroll when over tired has no effect", null, ((string[])(null)));
+#line 53
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line 54
+ testRunner.Given("I last slept 3 days ago", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 55
+ testRunner.When("I take 40 damage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 56
+  testRunner.And("I read a restore health scroll", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 57
+ testRunner.Then("My health should now be 60", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable

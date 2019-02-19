@@ -39,3 +39,19 @@ Scenario: Healers restore all health
 	When I take 40 damage
 		And Cast a healing spell
 	Then My health should now be 100
+
+
+Scenario: Total magical power
+	Given I have the following magical items
+	| name   | value | power |
+	| Ring   | 200   | 100   |
+	| Amulet | 400   | 200   |
+	| Gloves | 100   | 400   |
+	Then My total magical power should be 700
+
+
+Scenario: Reading a restore health scroll when over tired has no effect
+	Given I last slept 3 days ago
+	When I take 40 damage
+		And I read a restore health scroll
+	Then My health should now be 60

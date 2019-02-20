@@ -21,12 +21,14 @@ Scenario Outline: Health reduction
 	| 50     | 50             |
 
 
+@elf
 Scenario: Elf race characters get additional 20 damage resistance
 		And I have a damage resistance of 10
 		And I'm an elf
 	When I take 40 damage
 	Then My health should now be 90
 
+@elf
 Scenario: Elf race characters get additional 20 damage resistance using data table
 		And I have the following attributes
 		| attribute  | value |
@@ -66,7 +68,7 @@ Scenario: Weapons are worth money
 	Then My weapons should be worth 100
 
 
-
+@elf @ignore
 Scenario: Elf race characters don't lose magical item power
 	Given I'm an elf
 		And I have an Amulet with a power of 200

@@ -1,0 +1,60 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "As a user, i want to divide two numbers",
+    "line": 1,
+    "id": "as-a-user,-i-want-to-divide-two-numbers",
+    "tags": [],
+    "uri": "features\\divide.feature",
+    "elements": [
+      {
+        "id": "as-a-user,-i-want-to-divide-two-numbers;divide-two-numbers",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Divide two numbers",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "a calculator",
+            "match": {
+              "location": "features\\steps\\divideSteps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I divide 6 by 2",
+            "match": {
+              "location": "features\\steps\\divideSteps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the result is 3",
+            "match": {
+              "location": "features\\steps\\divideSteps.js:12"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

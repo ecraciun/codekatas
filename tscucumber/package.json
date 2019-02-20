@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tsc && cucumber-js features/",
+    "test": "tsc && cucumber-js features/ -f node_modules/cucumber-pretty -f json:report/cucumber_report.json --expand",
     "build": "tsc"
   },
   "keywords": [],
@@ -14,6 +14,8 @@
     "@types/chai": "^4.1.7",
     "@types/cucumber": "^4.0.5",
     "chai": "^4.2.0",
-    "cucumber": "^5.1.0"
+    "cucumber": "^5.1.0",
+    "cucumber-html-reporter": "^4.0.4",
+    "cucumber-pretty": "^1.5.0"
   }
 }

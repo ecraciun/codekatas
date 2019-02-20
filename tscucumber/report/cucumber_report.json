@@ -50,6 +50,649 @@
               "location": "features\\steps\\divideSteps.js:12"
             },
             "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "\tIn order to play the game\n\tAs a human player\n\tI want my character attributes to be correctly represented",
+    "keyword": "Feature",
+    "name": "PlayerCharacter",
+    "line": 1,
+    "id": "playercharacter",
+    "tags": [],
+    "uri": "features\\playerCharacter.feature",
+    "elements": [
+      {
+        "id": "playercharacter;taking-too-much-damage-results-in-player-death",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Taking too much damage results in player death",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I'm a new player",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:8"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I take 100 damage",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should be dead",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:14"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "playercharacter;health-reduction",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Health reduction",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I'm a new player",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:8"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I take 0 damage",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "My health should now be 100",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:24"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "playercharacter;health-reduction",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Health reduction",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I'm a new player",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:8"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I take 40 damage",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "My health should now be 60",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:24"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "playercharacter;health-reduction",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Health reduction",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I'm a new player",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:8"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I take 50 damage",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "My health should now be 50",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:24"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "playercharacter;elf-race-characters-get-additional-20-damage-resistance",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Elf race characters get additional 20 damage resistance",
+        "tags": [
+          {
+            "name": "@elf",
+            "line": 24
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I'm a new player",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:8"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I have a damage resistance of 10",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I'm an elf",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:21"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "I take 40 damage",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "My health should now be 90",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:24"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "playercharacter;healers-restore-all-health",
+        "keyword": "Scenario",
+        "line": 39,
+        "name": "Healers restore all health",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I'm a new player",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:8"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 40,
+            "name": "My character class is set to Healer",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:27"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "I take 40 damage",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "Cast a healing spell",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:30"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 43,
+            "name": "My health should now be 100",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:24"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "playercharacter;total-magical-power",
+        "keyword": "Scenario",
+        "line": 46,
+        "name": "Total magical power",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I'm a new player",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:8"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "value",
+                      "power"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Ring",
+                      "200",
+                      "100"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Amulet",
+                      "400",
+                      "200"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Gloves",
+                      "100",
+                      "400"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 47,
+            "name": "I have the following magical items",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "My total magical power should be 700",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:77"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "playercharacter;reading-a-restore-health-scroll-when-over-tired-has-no-effect",
+        "keyword": "Scenario",
+        "line": 55,
+        "name": "Reading a restore health scroll when over tired has no effect",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I'm a new player",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:8"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 56,
+            "name": "I last slept 3 days ago",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:47"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 57,
+            "name": "I take 40 damage",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "I read a restore health scroll",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 59,
+            "name": "My health should now be 60",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:24"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "playercharacter;weapons-are-worth-money",
+        "keyword": "Scenario",
+        "line": 62,
+        "name": "Weapons are worth money",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I'm a new player",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:8"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "value"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Sword",
+                      "50"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Pick",
+                      "40"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Knife",
+                      "10"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 63,
+            "name": "I have the following weapons",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:55"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 68,
+            "name": "My weapons should be worth 100",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:64"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "playercharacter;elf-race-characters-don't-lose-magical-item-power",
+        "keyword": "Scenario",
+        "line": 72,
+        "name": "Elf race characters don't lose magical item power",
+        "tags": [
+          {
+            "name": "@elf",
+            "line": 71
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I'm a new player",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:8"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 73,
+            "name": "I'm an elf",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:21"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 74,
+            "name": "I have an Amulet with a power of 200",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:33"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 75,
+            "name": "I use a magical Amulet",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:40"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 76,
+            "name": "The Amulet power should not be reduced",
+            "match": {
+              "location": "features\\steps\\playerCharacterSteps.js:43"
+            },
+            "result": {
               "status": "passed"
             }
           }

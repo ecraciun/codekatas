@@ -1,0 +1,12 @@
+<style>
+  #extension_UserType { display: none !important; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const userTypeInput = document.querySelector('input[name="extension_UserType"]');
+  if (userTypeInput) {
+    userTypeInput.type = 'hidden';
+  }
+});
+</script>
